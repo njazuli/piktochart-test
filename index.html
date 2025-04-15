@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Piktochart</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="src/main.css">
+</head>
+<body>
+  <div class="h-100 w-100">
+    <div class="row h-100 w-100 m-0">
+      <div class="sidepane h-auto bg-dark text-white col-3">
+        <div class="form mt-5">
+          <h4>Upload Image</h4>
+          <hr>
+          <div class="input-group">
+            <div class="custom-file">
+              <input id="upload-image-input" class="custom-file-input" name="upload" type="file">
+              <label class="custom-file-label" for="upload-image-input">Choose Image</label>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-info" type="button" id="upload-image">Upload</button>
+            </div>
+          </div>
+        </div>
+        <div class="assets w-100 mt-5">
+          <h4>Assets</h4>
+          <hr>
+          <div class="text">
+            <h5>Text</h5>
+            <input id="addTextInput" type="text" class="form-control">
+            <button id="addText" class="btn btn-info btn-block mt-2">Add Text</button>
+          </div>
+          <div class="image mt-4 d-flex flex-column justify-content-center">
+            <h5>Images</h5>
+            <div class="container px-0">
+              <div id="images-list" class="w-100 row mx-0">
+                <!-- Image list area -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas col-9">
+        <div id="canvas-area" class="block mx-auto mt-3">
+          <!-- Canvas area -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/js/imageHandling.js"></script>
+  <script type="module" src="./src/js/variables.js"></script>
+  <script type="module" src="./src/js/canvasHandling.js"></script>
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
